@@ -8,6 +8,6 @@ def lambda_handler(event, context):
         output = ""
         for bucket in results['Buckets']:
             output = output + bucket['Name'] + "<br>"
-        print("<h1><font color=green>S3 Bucket List:</font></h1><br><br>" + output)
+        return ("<h1><font color=green>S3 Bucket List:</font></h1><br><br>" + output)
     except:
-        print("<h1><font color=red>Error!</font></h1><br><br>" )
+        return ("<h1><font color=red>Error!</font></h1><br><br>" )
